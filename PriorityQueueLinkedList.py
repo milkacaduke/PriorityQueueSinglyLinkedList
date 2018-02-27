@@ -43,10 +43,21 @@ class PriorityQueueLL(object):
 	def peek(self):
 		pass
 
-	def print(self):
+	def print_all(self):
 		if self.head is None:
 			return
 
 		cur_node = self.head
 		while cur_node:
-			print(cur_node.data+"["+cur_node.priority+"] -> ", end="")
+			print(cur_node.data+"["+str(cur_node.priority)+"] -> ", end="")
+			cur_node = cur_node.next
+
+
+
+
+# main stuff
+pq = PriorityQueueLL()
+pq.push("A", 1)
+pq.push("B", 2)
+pq.push("C", 3)
+pq.print_all()
