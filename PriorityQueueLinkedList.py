@@ -23,11 +23,18 @@ class PriorityQueueLL(object):
 			self.head = new_node
 			return True
 
+		if priority >= self.head.priority:
+				new_node = Node(data, priority)
+				new_node.next = self.head
+				self.head = new_node
+				return True
+
 		cur_node = self.head
-		new_node = Node(data, priority)
 		while cur_node.next:
-			if new_node.priority >= cur_node.next.priority:
+
+			if priority >= cur_node.next.priority:
 				# insert at current.next position
+				new_node = Node(data, priority)
 				new_node.next = cur_node.next
 				cur_node.next = new_node
 				return True
@@ -49,7 +56,10 @@ class PriorityQueueLL(object):
 
 		cur_node = self.head
 		while cur_node:
-			print(cur_node.data+"["+str(cur_node.priority)+"] -> ", end="")
+			if cur_node.next is None:
+				print(cur_node.data+"["+str(cur_node.priority)+"]")
+			else:
+				print(cur_node.data+"["+str(cur_node.priority)+"] -> ", end="")
 			cur_node = cur_node.next
 
 
