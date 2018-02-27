@@ -88,12 +88,15 @@ class PriorityQueueLL(object):
 
 
 # main stuff
-pq = PriorityQueueLL()
+# pq = PriorityQueueLL()
 
-pq.push("C", 3)
-pq.push("A", 5)
-pq.push("E", 1)
-pq.push("B", 4)
-pq.push("D", 2)
+# pq.push("C", 3)
+# pq.push("A", 5)
+# pq.push("E", 1)
+# pq.push("B", 4)
+# pq.push("D", 2)
 
-pq.print_all()
+# pq.print_all()
+# n1 = pq.pop()
+# pq.print_all()
+# print(n1.data)
