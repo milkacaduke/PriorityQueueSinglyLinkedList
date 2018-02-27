@@ -29,7 +29,6 @@ class PriorityQueueLL(object):
 
 		new_node = Node(data, priority)
 
->>>>>>> master
 		if priority >= self.head.priority:
 				new_node.next = self.head
 				self.head = new_node
