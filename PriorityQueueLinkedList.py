@@ -23,6 +23,9 @@ class PriorityQueueLL(object):
 			self.head = new_node
 			return True
 
+
+		# The first element will not be checked the way our while is setup. 
+		# need to manually check head accordingly
 		if priority >= self.head.priority:
 				new_node = Node(data, priority)
 				new_node.next = self.head
@@ -31,7 +34,6 @@ class PriorityQueueLL(object):
 
 		cur_node = self.head
 		while cur_node.next:
-
 			if priority >= cur_node.next.priority:
 				# insert at current.next position
 				new_node = Node(data, priority)
@@ -45,7 +47,24 @@ class PriorityQueueLL(object):
 		
 
 	def pop(self):
-		pass
+		"""
+		: returns the highest priority node and remove from the queue, 
+		: AKA remove and return head
+		"""
+		if self.head is None:
+			return
+
+		if self.head.next is None:
+			temp = self.head
+			self.head = None
+			return temp
+		else:
+			temp = self.head
+			self.head = self.head.next
+			return temp
+
+		return False
+		
 
 	def peek(self):
 		pass
