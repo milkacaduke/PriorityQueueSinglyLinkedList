@@ -70,7 +70,7 @@ class PriorityQueueLL(object):
 		
 
 	def peek(self):
-		pass
+		return self.head.data
 
 	def print_all(self):
 		if self.head is None:
