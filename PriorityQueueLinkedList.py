@@ -86,7 +86,11 @@ class PriorityQueueLL(object):
 
 # main stuff
 pq = PriorityQueueLL()
-pq.push("A", 1)
-pq.push("B", 2)
+pq.push("D", 2)
+pq.push("E", 1)
 pq.push("C", 3)
+pq.push("A", 5)
+pq.push("B", 4)
+
+
 pq.print_all()
